@@ -1,38 +1,34 @@
-
+import logo from './logo.svg';
+import './App.css';
+import Navbar from './component/share/navigation/Navbar';
+import Home from './component/home/home/Home';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-
+  Link
 } from "react-router-dom";
-import Home from "./components/Home/Home/Home";
-import Navbar from "./components/Share/Navbar/Navbar";
-import ProductData from './components/ProductData/ProductData';
-import Login from "./components/Login/Login";
-
-
+import ProductData from './component/ProductData/ProductData';
 
 function App() {
-  return (
 
-    <Router>
+  return (
+    <Router  >
       <Navbar />
       <Switch>
         <Route exact path="/">
-          <Home></Home>
+          <Home />
         </Route>
         <Route path="/home">
-          <Home></Home>
+          <Home />
         </Route>
-        <Route path="/productsData">
+        <Route path="/product/:prodId">
           <ProductData />
         </Route>
-        <Route path="/login">
-          <Login></Login>
-        </Route>
       </Switch>
-    </Router>
 
+
+    </Router>
   );
 }
 
