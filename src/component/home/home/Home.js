@@ -1,13 +1,16 @@
 import React from 'react';
+import Footer from '../../Share/Footer/Footer';
+import FoodShop from '../FoodShop/FoodShop/FoodShop';
 import Header from '../Header/Header';
-import Restaurant from '../Restrunt/Restunt';
+import OnionService from '../OnionService/OnionService';
 
 const Home = () => {
     return (
-        <div>
-            <Header />
-            <Restaurant />
-        </div>
+        <section>
+            <FoodShop></FoodShop>
+            <OnionService></OnionService>
+            <Footer />
+        </section>
     );
 };
 

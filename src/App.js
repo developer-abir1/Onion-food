@@ -1,34 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
-import Navbar from './component/share/navigation/Navbar';
-import Home from './component/home/home/Home';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import ProductData from './component/ProductData/ProductData';
+import { Routes, Route, } from "react-router-dom";
 
+import Home from './component/Home/Home/Home';
+import Navbar from './component/Share/Navbar/Navbar';
 function App() {
-
   return (
-    <Router  >
+
+    <div>
       <Navbar />
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/home">
-          <Home />
-        </Route>
-        <Route path="/product/:prodId">
-          <ProductData />
-        </Route>
-      </Switch>
+      <Routes>
+        <Route index path="/" element={<Home></Home>} />
+        <Route path="/home" element={<Home></Home>} />
 
 
-    </Router>
+      </Routes >
+    </div>
   );
 }
 

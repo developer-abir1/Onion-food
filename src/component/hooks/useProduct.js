@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from 'react';
 
 const useProduct = () => {
-    const [products, setProducts] = useState([])
+    const [product, setProduct] = useState([])
     useEffect(() => {
-        fetch('https://mocki.io/v1/08ad5b0c-0b8f-4cb0-9453-31e50d11d2ae')
+        fetch('https://mocki.io/v1/88ac7391-294f-4699-a20f-eaaec2e50832')
             .then(res => res.json())
-            .then(data => setProducts(data))
+            .then(data => setProduct(data))
     }, [])
-    return [products, setProducts]
+
+
+
+
+
+
+    return [product, setProduct]
 };
 
 export default useProduct;
